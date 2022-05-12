@@ -1,0 +1,75 @@
+@import "normalize";
+@import "var";
+@import "fonts";
+@import "mixins";
+@import "blocks/header";
+@import "blocks/adaptuvne__menu";
+@import "blocks/hero";
+@import "blocks/store";
+@import "blocks/categories";
+@import "blocks/brands";
+@import "blocks/cards";
+@import "blocks/reviews";
+@import "blocks/swiper-bundle";
+@import "blocks/download";
+@import "blocks/footer";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+main {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.container {
+  height: 100%;
+  padding: 15px 30px;
+  @media (min-width: $bp768) {
+    padding: 30px 60px;
+  }
+  @media (min-width: $bp1024) {
+    padding: 60px 120px;
+  }
+}
+
+.section__title {
+  font-family: "Cal Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  @media (max-width: $bp1024) {
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  line-height: 120%;
+  color: $blackcolor;
+
+  color: $blackcolor;
+  span {
+    color: $orangecolor;
+  }
+}

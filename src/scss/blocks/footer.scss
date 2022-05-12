@@ -1,0 +1,150 @@
+.footer {
+  background: #eeeeee;
+ 
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, auto));
+
+    justify-content: space-between;
+    gap: 20px;
+    @media (max-width: $bp800) {
+      grid-template-columns: repeat(3, 1fr) !important;
+      grid-template-rows: auto auto;
+    }
+    @media (max-width: $bp480) {
+      grid-template-columns: repeat(1, 1fr) !important;
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    &:first-child {
+      justify-content: space-between;
+      @media (max-width: $bp800) {
+        grid-column: span 3;
+      }
+      @media (max-width: $bp480) {
+        grid-column: 1/2;
+      }
+    }
+
+    &:nth-child(2) {
+      justify-self: end;
+      @media (max-width: $bp800) {
+        justify-self: start;
+      }
+      @media (max-width: $bp480) {
+        justify-self: start;
+      }
+    }
+    &:nth-child(3) {
+      justify-self: end;
+      @media (max-width: $bp800) {
+        justify-self: center;
+      }
+      @media (max-width: $bp480) {
+        justify-self: start;
+      }
+    }
+    &:nth-child(4) {
+      justify-self: end;
+
+      @media (max-width: $bp480) {
+        justify-self: start;
+      }
+    }
+  }
+
+  
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &:hover {
+      svg {
+        path {
+          stroke: #ff6428;
+        }
+      }
+    }
+    svg {
+      path {
+        transition: 0.4s;
+      }
+    }
+  }
+
+  &__link {
+    color: #666666;
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 400;
+    svg {
+      path {
+        transition: 0.4s;
+      }
+    }
+    &.link-hover {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 25%;
+        height: 2px;
+        background: #ff6428;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: 0;
+        transition: 0.4s ease;
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+          width: 100%;
+        }
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: #ff6428;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    text-transform: uppercase;
+
+    color: #121212;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+      color: rgba(18, 18, 18, 0.6);
+  }
+}

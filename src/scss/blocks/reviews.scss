@@ -1,0 +1,96 @@
+.reviews {
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+    @media (max-width:$bp768) {
+      margin-bottom: 30px;
+     
+    }
+  }
+
+  &__swiper {
+    position: relative;
+  }
+
+  
+
+  .reviews-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width:$bp1280) {
+     
+      align-items: flex-start;
+      gap: 50px;
+    }
+    @media (max-width:$bp768) {
+     flex-direction: column;
+gap: 30px;
+     
+    }
+
+    &__img {
+      flex: 0 1 33.33%;
+      margin-left: 80px;
+      @media (max-width:$bp1024) {
+        margin-left: 0;
+       
+      }
+      @media (max-width:$bp768) {
+        max-width: 80%;
+       
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      flex: 0 1 44%;
+      @media (max-width:$bp1024) {
+       
+       flex: 1 1 50%;
+      }
+    }
+  }
+  .slide-info {
+    &__text {
+      font-size: 24px;
+      line-height: 160%;
+      margin-bottom: 50px;
+      @media (max-width:$bp600) {
+       font-size: 18px;
+       line-height: 125%;
+       }
+    }
+
+    
+  }
+  .slide-about {
+    &__name {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 160%;
+      color: black;
+    }
+  }
+  .swiper-pagination2 {
+    z-index: 10;
+    position: absolute !important;
+    width: fit-content !important;
+    right: 0;
+    left: auto !important;
+    bottom: 35px !important;
+    .swiper-pagination-bullet {
+      height: 16px;
+      width: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $orangecolor;
+      transform: rotate(90deg);
+      transition: 0.4s;
+    }
+  }
+}
